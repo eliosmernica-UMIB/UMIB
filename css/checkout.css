@@ -321,6 +321,17 @@
 }
 
 @media (max-width: 768px) {
+    .em-checkout-hero {
+        padding: 100px 0 40px;
+        margin-top: 60px;
+    }
+    
+    .em-checkout-container {
+        padding: 20px 15px;
+        border-radius: 20px;
+    }
+    
+    /* Cart Table Mobile Layout */
     .em-cart-table thead {
         display: none;
     }
@@ -330,10 +341,264 @@
         flex-wrap: wrap;
         padding: 20px;
         margin-bottom: 15px;
+        position: relative;
     }
     
     .em-cart-table td {
         padding: 10px;
         border-radius: 0 !important;
+    }
+    
+    /* Bootstrap table responsive fix */
+    .table thead {
+        display: none;
+    }
+    
+    .table tbody tr {
+        display: flex;
+        flex-wrap: wrap;
+        background: #f8f9fa;
+        border-radius: 15px;
+        padding: 15px;
+        margin-bottom: 15px;
+        position: relative;
+    }
+    
+    .table tbody td {
+        border: none;
+        padding: 8px 5px;
+    }
+    
+    /* Product cell - full width on top */
+    .table tbody td:first-child {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 10px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .table tbody td:first-child img {
+        width: 80px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    
+    /* Price, Quantity, Total cells */
+    .table tbody td:nth-child(2),
+    .table tbody td:nth-child(3),
+    .table tbody td:nth-child(4) {
+        width: 33.33%;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+    
+    .table tbody td:nth-child(2)::before {
+        content: 'Price';
+        display: block;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        color: #888;
+        margin-bottom: 5px;
+    }
+    
+    .table tbody td:nth-child(3)::before {
+        content: 'Qty';
+        display: block;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        color: #888;
+        margin-bottom: 5px;
+    }
+    
+    .table tbody td:nth-child(4)::before {
+        content: 'Total';
+        display: block;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        color: #888;
+        margin-bottom: 5px;
+    }
+    
+    /* Delete button cell */
+    .table tbody td:last-child {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: auto;
+        padding: 0;
+    }
+    
+    /* Quantity control mobile */
+    .em-quantity-control {
+        gap: 5px;
+        padding: 3px;
+    }
+    
+    .em-qty-btn {
+        width: 28px;
+        height: 28px;
+        font-size: 1rem;
+    }
+    
+    .em-qty-value {
+        font-size: 0.95rem;
+        min-width: 25px;
+    }
+    
+    /* Order Summary Mobile */
+    .em-order-summary {
+        padding: 25px 20px;
+        border-radius: 15px;
+    }
+    
+    .em-order-summary h4 {
+        font-size: 1.15rem;
+    }
+    
+    .em-summary-row.em-total span:last-child {
+        font-size: 1.5rem;
+    }
+    
+    .em-checkout-btn {
+        padding: 15px;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+    }
+    
+    /* Promo input mobile */
+    .em-promo-input {
+        flex-direction: column;
+    }
+    
+    .em-promo-input input {
+        width: 100%;
+    }
+    
+    .em-promo-btn {
+        width: 100%;
+    }
+    
+    /* Trust badges mobile */
+    .em-trust-badges {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .em-trust-badge {
+        flex: 0 0 calc(33.33% - 10px);
+    }
+    
+    /* Empty cart mobile */
+    .em-empty-cart {
+        padding: 40px 15px;
+    }
+    
+    .em-empty-cart i {
+        font-size: 3rem;
+    }
+    
+    /* Page header mobile */
+    .d-flex.align-items-center.justify-content-between {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 15px;
+    }
+    
+    /* Success/Warning modals */
+    .success-checkmark,
+    .warning-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .em-checkout-hero {
+        padding: 90px 0 30px;
+    }
+    
+    .em-checkout-container {
+        padding: 15px 12px;
+        margin-top: -20px;
+    }
+    
+    /* Even smaller table cells */
+    .table tbody td:nth-child(2),
+    .table tbody td:nth-child(3),
+    .table tbody td:nth-child(4) {
+        font-size: 0.85rem;
+    }
+    
+    .table tbody td:first-child img {
+        width: 65px;
+        height: 50px;
+    }
+    
+    /* Smaller quantity controls */
+    .em-qty-btn {
+        width: 26px;
+        height: 26px;
+        font-size: 0.9rem;
+    }
+    
+    .em-qty-value {
+        font-size: 0.85rem;
+    }
+    
+    /* Order summary smaller */
+    .em-order-summary {
+        padding: 20px 15px;
+    }
+    
+    .em-order-summary h4 {
+        font-size: 1.1rem;
+        margin-bottom: 18px;
+    }
+    
+    .em-summary-row {
+        font-size: 0.9rem;
+        padding: 10px 0;
+    }
+    
+    .em-summary-row.em-total span:last-child {
+        font-size: 1.35rem;
+    }
+    
+    .em-checkout-btn {
+        padding: 14px;
+        font-size: 0.8rem;
+    }
+    
+    /* Trust badges stack */
+    .em-trust-badges {
+        gap: 10px;
+    }
+    
+    .em-trust-badge {
+        flex: 0 0 calc(50% - 10px);
+        font-size: 0.7rem;
+    }
+    
+    .em-trust-badge i {
+        font-size: 1.25rem;
+    }
+    
+    /* Modals */
+    .success-checkmark,
+    .warning-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 35px;
+    }
+    
+    /* Continue shopping button */
+    .btn-outline-dark {
+        padding: 10px 15px;
+        font-size: 0.85rem;
     }
 }
