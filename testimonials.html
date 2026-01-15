@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EM Luxury Cars - Reviews</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/testimonials.css">
+</head>
+<body id="em-body">
+
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand-lg fixed-top em-navbar">
+        <div class="container">
+            <a class="navbar-brand em-brand" href="index.html">EM<span class="em-accent">.</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#emNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="emNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link em-nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link em-nav-link" href="about.html">About</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link em-nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Shop NOW</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="inventory.html">Buy Cars</a></li>
+                            <li><a class="dropdown-item" href="rent.html">Rent a Car</a></li>
+                            <li><a class="dropdown-item" href="parts.html">Car Parts</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link em-nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link em-nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link em-nav-link active" href="testimonials.html">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link em-nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="checkout.html" class="btn em-btn-primary position-relative">
+                            Cart <span id="em-cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                        </a>
+                    </li>
+                    
+                    <!-- User Account -->
+                    <li class="nav-item dropdown ms-lg-2" id="userNavItem">
+                        <a class="nav-link em-nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="userNavLink">
+                            <i class="bi bi-person-circle"></i> Account
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="signin.html" id="navSignIn">Sign In</a></li>
+                            <li><a class="dropdown-item" href="signup.html" id="navSignUp">Sign Up</a></li>
+                            <li class="d-none" id="navDashboardItem"><a class="dropdown-item" href="dashboard.html">Dashboard</a></li>
+                            <li class="d-none" id="navLogoutItem"><a class="dropdown-item" href="#" onclick="logout()">Logout</a></li>
+                        </ul>
+                    </li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="em-reviews-hero">
+        <div class="container position-relative text-center text-white">
+            <span class="em-section-subtitle" style="color: #ffd700;">What Clients Say</span>
+            <h1 class="display-3 fw-bold mb-3">Client Testimonials</h1>
+            <p class="lead text-secondary mb-0">Real experiences from our valued customers worldwide</p>
+        </div>
+    </header>
+
+    <!-- STATS SECTION -->
+    <section class="py-5" style="background: #f8f9fa; margin-top: -50px; position: relative; z-index: 2;">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-3 col-6">
+                    <div class="em-stats-box">
+                        <div class="em-stats-number">4.9</div>
+                        <div class="em-stats-label">Average Rating</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="em-stats-box">
+                        <div class="em-stats-number">2000+</div>
+                        <div class="em-stats-label">Happy Clients</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="em-stats-box">
+                        <div class="em-stats-number">500+</div>
+                        <div class="em-stats-label">Reviews</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="em-stats-box">
+                        <div class="em-stats-number">98%</div>
+                        <div class="em-stats-label">Recommend Us</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS SECTION -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <span class="em-section-subtitle">Testimonials</span>
+                <h2 class="em-section-title">What Our Clients Say</h2>
+            </div>
+            <div class="row g-4">
+                <!-- Review 1 -->
+                <div class="col-lg-6">
+                    <div class="em-review-card">
+                        <div class="em-review-rating">★★★★★</div>
+                        <h4 class="em-review-title">"Unmatched Service & Selection"</h4>
+                        <p class="em-review-text">"Sourcing a 1962 Ferrari GTO seemed impossible until I contacted EM. Their logistics team handled everything from auction to delivery. The car arrived in perfect condition with all documentation. An exceptional experience from start to finish."</p>
+                        <div class="em-review-author">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="em-review-avatar" alt="Alexander">
+                            <div>
+                                <div class="em-review-name">Alexander Rossi</div>
+                                <div class="em-review-role">Collector • Purchased Ferrari 250 GTO</div>
+                            </div>
+                            <span class="em-review-badge">Verified</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="col-lg-6">
+                    <div class="em-review-card">
+                        <div class="em-review-rating">★★★★★</div>
+                        <h4 class="em-review-title">"Best Rental Experience Ever"</h4>
+                        <p class="em-review-text">"Rented the Bugatti Chiron for a weekend getaway. The booking process was smooth, pricing transparent, and the car was in pristine condition. The team even delivered it to my hotel. Can't wait to come back for another experience!"</p>
+                        <div class="em-review-author">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" class="em-review-avatar" alt="Sophia">
+                            <div>
+                                <div class="em-review-name">Sophia Chen</div>
+                                <div class="em-review-role">Enthusiast • Rented Bugatti Chiron</div>
+                            </div>
+                            <span class="em-review-badge">Verified</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="col-lg-6">
+                    <div class="em-review-card">
+                        <div class="em-review-rating">★★★★★</div>
+                        <h4 class="em-review-title">"Professional & Knowledgeable Team"</h4>
+                        <p class="em-review-text">"As a first-time supercar buyer, I had many questions. The sales team at EM was incredibly patient, explaining everything from insurance to maintenance costs. They helped me find the perfect Lamborghini within my budget."</p>
+                        <div class="em-review-author">
+                            <img src="https://randomuser.me/api/portraits/men/67.jpg" class="em-review-avatar" alt="David">
+                            <div>
+                                <div class="em-review-name">David Martinez</div>
+                                <div class="em-review-role">Business Owner • Purchased Huracán</div>
+                            </div>
+                            <span class="em-review-badge">Verified</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="col-lg-6">
+                    <div class="em-review-card">
+                        <div class="em-review-rating">★★★★★</div>
+                        <h4 class="em-review-title">"Excellent Parts Department"</h4>
+                        <p class="em-review-text">"Finding genuine parts for my vintage Porsche 911 has always been a challenge. EM's parts department not only had what I needed but also provided expert advice on installation. Fast shipping and excellent packaging!"</p>
+                        <div class="em-review-author">
+                            <img src="https://randomuser.me/api/portraits/men/85.jpg" class="em-review-avatar" alt="James">
+                            <div>
+                                <div class="em-review-name">James Wilson</div>
+                                <div class="em-review-role">Mechanic • Parts Customer</div>
+                            </div>
+                            <span class="em-review-badge">Verified</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 5 -->
+                <div class="col-lg-6">
+                    <div class="em-review-card">
+                        <div class="em-review-rating">★★★★★</div>
+                        <h4 class="em-review-title">"Seamless International Shipping"</h4>
+                        <p class="em-review-text">"I purchased a Mercedes 300SL from EM and had it shipped to Dubai. The entire process was handled professionally – customs, documentation, and even registration assistance. The car arrived exactly as described."</p>
+                        <div class="em-review-author">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" class="em-review-avatar" alt="Ahmed">
+                            <div>
+                                <div class="em-review-name">Ahmed Al-Rashid</div>
+                                <div class="em-review-role">Collector • Dubai, UAE</div>
+                            </div>
+                            <span class="em-review-badge">Verified</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 6 -->
+                <div class="col-lg-6">
+                    <div class="em-review-card">
+                        <div class="em-review-rating">★★★★☆</div>
+                        <h4 class="em-review-title">"Great Experience Overall"</h4>
+                        <p class="em-review-text">"Rented a Porsche GT3 for a track day. The car was immaculate and performed beautifully. Only minor delay in pickup, but the team made up for it with excellent customer service. Would definitely recommend!"</p>
+                        <div class="em-review-author">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" class="em-review-avatar" alt="Emily">
+                            <div>
+                                <div class="em-review-name">Emily Thompson</div>
+                                <div class="em-review-role">Racing Enthusiast • Rental</div>
+                            </div>
+                            <span class="em-review-badge">Verified</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEO TESTIMONIALS -->
+    <section class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <span class="em-section-subtitle">Watch & Listen</span>
+                <h2 class="em-section-title">Video Testimonials</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="em-video-testimonial">
+                        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=600&q=80" class="em-video-thumbnail" alt="Video">
+                        <div class="em-play-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+                            </svg>
+                        </div>
+                        <div class="p-3 text-center">
+                            <strong>John's Ferrari Journey</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="em-video-testimonial">
+                        <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=600&q=80" class="em-video-thumbnail" alt="Video">
+                        <div class="em-play-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+                            </svg>
+                        </div>
+                        <div class="p-3 text-center">
+                            <strong>Sarah's Rental Experience</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="em-video-testimonial">
+                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=600&q=80" class="em-video-thumbnail" alt="Video">
+                        <div class="em-play-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+                            </svg>
+                        </div>
+                        <div class="p-3 text-center">
+                            <strong>Track Day with GT3</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WRITE A REVIEW -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="em-review-form">
+                        <div class="text-center mb-4">
+                            <span class="em-section-subtitle">Share Your Experience</span>
+                            <h2 class="em-section-title">Write a Review</h2>
+                        </div>
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">Full Name</label>
+                                    <input type="text" class="form-control form-control-lg" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">Email</label>
+                                    <input type="email" class="form-control form-control-lg" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">Service Used</label>
+                                    <select class="form-select form-select-lg">
+                                        <option>Car Purchase</option>
+                                        <option>Car Rental</option>
+                                        <option>Parts Purchase</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">Rating</label>
+                                    <select class="form-select form-select-lg">
+                                        <option>★★★★★ (5 Stars)</option>
+                                        <option>★★★★☆ (4 Stars)</option>
+                                        <option>★★★☆☆ (3 Stars)</option>
+                                        <option>★★☆☆☆ (2 Stars)</option>
+                                        <option>★☆☆☆☆ (1 Star)</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label fw-bold">Review Title</label>
+                                    <input type="text" class="form-control form-control-lg" placeholder="Sum up your experience in a few words">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label fw-bold">Your Review</label>
+                                    <textarea class="form-control" rows="5" placeholder="Share details of your experience..."></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn em-btn-primary w-100 py-3">Submit Review</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="em-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-white fw-bold mb-3">EM Luxury Cars</h5>
+                    <p>The premier destination for automotive excellence. Buying, renting, and upgrading - we do it all with passion and precision.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-white fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="inventory.html" class="text-muted">Inventory</a></li>
+                        <li class="mb-2"><a href="rent.html" class="text-muted">Rentals</a></li>
+                        <li class="mb-2"><a href="parts.html" class="text-muted">Parts Shop</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-muted">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-white fw-bold mb-3">Contact</h5>
+                    <p class="text-muted">123 Luxury Blvd, Beverly Hills<br>California, USA<br><br><strong>Phone:</strong> +1 (555) 123-4567<br><strong>Email:</strong> info@emcars.com</p>
+                </div>
+            </div>
+            <div class="text-center mt-4 pt-4 border-top border-secondary">
+                <p class="mb-0 text-muted small">&copy; 2026 EM Luxury Cars. Created for Web Technologies Project.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            updateUserNavigation();
+        });
+    </script>
+</body>
+</html>

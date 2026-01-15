@@ -1,0 +1,1021 @@
+/* =============================================
+   RENT.HTML - Rental Page Styles (Enhanced v3)
+   ============================================= */
+
+/* ========== HERO SECTION - Premium Design ========== */
+.rent-hero {
+    background: linear-gradient(135deg, #000 0%, #0a0a0a 50%, #111 100%);
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px;
+}
+
+.rent-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: 
+        radial-gradient(ellipse at 20% 50%, rgba(255,215,0,0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 80%, rgba(255,215,0,0.05) 0%, transparent 40%);
+    pointer-events: none;
+}
+
+/* Floating Particles */
+.rent-hero-particles {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.rent-hero-particles span {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #ffd700;
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: float-particle 15s infinite;
+}
+
+.rent-hero-particles span:nth-child(1) { left: 10%; animation-delay: 0s; }
+.rent-hero-particles span:nth-child(2) { left: 30%; animation-delay: 3s; }
+.rent-hero-particles span:nth-child(3) { left: 50%; animation-delay: 6s; }
+.rent-hero-particles span:nth-child(4) { left: 70%; animation-delay: 9s; }
+.rent-hero-particles span:nth-child(5) { left: 90%; animation-delay: 12s; }
+
+@keyframes float-particle {
+    0%, 100% { 
+        transform: translateY(100vh) scale(0);
+        opacity: 0;
+    }
+    10% { opacity: 0.5; }
+    90% { opacity: 0.5; }
+    100% { 
+        transform: translateY(-100px) scale(1);
+        opacity: 0;
+    }
+}
+
+/* Hero Content */
+.rent-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.rent-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, rgba(255,215,0,0.2) 0%, rgba(255,215,0,0.05) 100%);
+    border: 1px solid rgba(255,215,0,0.3);
+    color: #ffd700;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(255,215,0,0.2); }
+    50% { box-shadow: 0 0 40px rgba(255,215,0,0.4); }
+}
+
+.rent-hero-title {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    letter-spacing: -2px;
+}
+
+.rent-hero-highlight {
+    display: block;
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4a 50%, #ffd700 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+}
+
+.rent-hero-highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(90deg, #ffd700, transparent);
+    opacity: 0.3;
+    border-radius: 4px;
+}
+
+.rent-hero-text {
+    font-size: 1.15rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.8;
+    max-width: 500px;
+    margin-bottom: 35px;
+}
+
+/* Hero Buttons */
+.rent-hero-cta {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.btn-rent-primary {
+    background: linear-gradient(135deg, #ffd700 0%, #e6c200 100%);
+    color: #000;
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(255,215,0,0.3);
+}
+
+.btn-rent-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(255,215,0,0.4);
+    color: #000;
+}
+
+.btn-rent-outline {
+    background: transparent;
+    color: #fff;
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    border: 2px solid rgba(255,255,255,0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-rent-outline:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: #ffd700;
+    color: #ffd700;
+}
+
+/* Hero Features */
+.rent-hero-features {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.rent-feature {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9rem;
+}
+
+.rent-feature i {
+    color: #ffd700;
+    font-size: 1.1rem;
+}
+
+/* Hero Visual */
+.rent-hero-visual {
+    position: relative;
+    z-index: 2;
+}
+
+.rent-hero-card {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    background: linear-gradient(145deg, #1a1a1a 0%, #0d0d0d 100%);
+    border: 1px solid rgba(255,215,0,0.2);
+    box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+}
+
+.rent-card-glow {
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,215,0,0.15) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.rent-hero-car {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+}
+
+.rent-card-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.9) 100%);
+    margin-top: -80px;
+    position: relative;
+    z-index: 2;
+}
+
+.rent-card-brand .brand-label {
+    display: block;
+    font-size: 0.7rem;
+    color: #ffd700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 4px;
+}
+
+.rent-card-brand .brand-name {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.rent-card-price .price-from {
+    display: block;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.5);
+    text-align: right;
+}
+
+.rent-card-price .price-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #ffd700;
+}
+
+.rent-card-price .price-value small {
+    font-size: 0.8rem;
+    font-weight: 400;
+    opacity: 0.7;
+}
+
+/* Hero Stats */
+.rent-hero-stats {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.rent-stat-card {
+    flex: 1;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 20px 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.rent-stat-card:hover {
+    background: rgba(255,215,0,0.08);
+    border-color: rgba(255,215,0,0.3);
+    transform: translateY(-5px);
+}
+
+.rent-stat-card .stat-icon {
+    display: block;
+    font-size: 1.3rem;
+    color: #ffd700;
+    margin-bottom: 8px;
+}
+
+.rent-stat-card .stat-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #fff;
+}
+
+.rent-stat-card .stat-label {
+    display: block;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Hero Scroll Indicator */
+.rent-hero-scroll {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255,255,255,0.4);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: scroll-bounce 2s ease-in-out infinite;
+}
+
+.rent-hero-scroll i {
+    font-size: 1.5rem;
+    color: #ffd700;
+}
+
+@keyframes scroll-bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(10px); }
+}
+
+/* Responsive Hero */
+@media (max-width: 992px) {
+    .rent-hero-title {
+        font-size: 3rem;
+    }
+    
+    .rent-hero-visual {
+        margin-top: 50px;
+    }
+    
+    .rent-hero-stats {
+        flex-wrap: wrap;
+    }
+    
+    .rent-stat-card {
+        min-width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 576px) {
+    .rent-hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .rent-hero-text {
+        font-size: 1rem;
+    }
+    
+    .rent-hero-cta {
+        flex-direction: column;
+    }
+    
+    .btn-rent-primary,
+    .btn-rent-outline {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .rent-hero-features {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .rent-hero-scroll {
+        display: none;
+    }
+}
+
+/* ========== PROCESS STEPS ========== */
+.process-section {
+    background: linear-gradient(180deg, #f8f9fa 0%, #fff 100%);
+    padding: 100px 0;
+}
+
+.process-step {
+    text-align: center;
+    padding: 45px 35px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.process-step:hover {
+    transform: translateY(-10px);
+}
+
+.process-step::after {
+    content: '';
+    position: absolute;
+    top: 55px;
+    right: -50%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #ffd700 0%, #ffed4a 50%, transparent 100%);
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .process-step::after {
+        display: block;
+    }
+    .process-step:last-child::after {
+        display: none;
+    }
+}
+
+.step-number {
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4a 100%);
+    color: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin: 0 auto 25px;
+    box-shadow: 0 15px 35px rgba(255, 215, 0, 0.35);
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.process-step:hover .step-number {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.process-step h5 {
+    font-weight: 800;
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+    color: #111;
+}
+
+.process-step p {
+    color: #666;
+    line-height: 1.7;
+}
+
+/* ========== FLEET CARDS ========== */
+.fleet-card {
+    border-radius: 24px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    position: relative;
+}
+
+.fleet-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ffd700, #e6c200);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+    z-index: 3;
+}
+
+.fleet-card:hover::before {
+    transform: scaleX(1);
+}
+
+.fleet-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.18);
+}
+
+/* Selected State */
+.fleet-card.em-selected {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(255,215,0,0.25);
+    border: 2px solid #ffd700;
+}
+
+.fleet-card.em-selected::before {
+    transform: scaleX(1);
+}
+
+.fleet-card img {
+    height: 220px;
+    object-fit: cover;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.fleet-card:hover img {
+    transform: scale(1.08);
+}
+
+.fleet-card-body {
+    padding: 28px;
+}
+
+.fleet-card .car-category {
+    color: #ffd700;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.fleet-card h5 {
+    font-weight: 800;
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.fleet-card .daily-rate {
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: #000;
+}
+
+.fleet-card .daily-rate span {
+    font-size: 0.9rem;
+    color: #6c757d;
+    font-weight: 400;
+}
+
+.fleet-card .car-specs {
+    display: flex;
+    gap: 15px;
+    margin: 15px 0;
+    padding: 15px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.fleet-card .spec-item {
+    text-align: center;
+    flex: 1;
+}
+
+.fleet-card .spec-item small {
+    color: #6c757d;
+    font-size: 0.78rem;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Status Badges */
+.status-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: white;
+    z-index: 2;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.bg-available { background: linear-gradient(135deg, #28a745, #20c997); }
+.bg-unavailable { background: linear-gradient(135deg, #dc3545, #fd7e14); }
+
+.card-unavailable {
+    opacity: 0.7;
+}
+
+/* ========== BOOKING SECTION ========== */
+.em-booking-section {
+    background: linear-gradient(180deg, #f8f9fa 0%, #eee 100%);
+    position: relative;
+}
+
+.em-booking-container {
+    background: #fff;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.12);
+}
+
+/* Left Side - Car Preview */
+.em-booking-preview {
+    background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+    height: 100%;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.em-car-placeholder {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+    color: #fff;
+}
+
+.em-placeholder-icon {
+    width: 120px;
+    height: 120px;
+    background: rgba(255,215,0,0.1);
+    border: 2px dashed rgba(255,215,0,0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.em-placeholder-icon i {
+    font-size: 3.5rem;
+    color: #ffd700;
+    opacity: 0.5;
+}
+
+.em-car-placeholder h4 {
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.em-car-placeholder p {
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 20px;
+}
+
+/* Selected Car Preview */
+.em-car-preview-full {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    animation: em-fade-up 0.4s ease;
+}
+
+.em-remove-car-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.1);
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    z-index: 5;
+    transition: all 0.3s ease;
+}
+
+.em-remove-car-btn:hover {
+    background: #dc3545;
+    transform: rotate(90deg);
+}
+
+.em-preview-img-container {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.em-preview-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 280px;
+}
+
+.em-preview-details {
+    padding: 30px;
+    background: linear-gradient(to top, #000, transparent);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.em-preview-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    background: #ffd700;
+    color: #000;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    margin-bottom: 12px;
+}
+
+.em-preview-details h3 {
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.em-preview-rate {
+    color: #ffd700;
+}
+
+.em-rate-amount {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.em-rate-period {
+    font-size: 1rem;
+    opacity: 0.7;
+}
+
+.em-preview-features {
+    display: flex;
+    gap: 20px;
+    padding: 20px 30px;
+    background: rgba(255,255,255,0.05);
+}
+
+.em-feature {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255,255,255,0.7);
+    font-size: 0.85rem;
+}
+
+.em-feature i {
+    color: #ffd700;
+}
+
+/* Right Side - Form */
+.em-booking-form-wrapper {
+    padding: 50px;
+}
+
+.em-form-header {
+    margin-bottom: 35px;
+}
+
+.em-form-header h2 {
+    font-weight: 800;
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+.em-form-header p {
+    color: #666;
+}
+
+.em-form-input {
+    border: 2px solid #eee;
+    border-radius: 15px;
+    padding: 15px 20px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.em-form-input:focus {
+    border-color: #ffd700;
+    box-shadow: 0 0 0 4px rgba(255,215,0,0.1);
+}
+
+.form-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.form-label i {
+    color: #ffd700;
+}
+
+/* Price Summary */
+.em-price-summary {
+    background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+    border: 2px solid #eee;
+    border-radius: 20px;
+    padding: 25px;
+    margin: 30px 0;
+}
+
+.em-price-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.em-discount-row {
+    color: #28a745;
+}
+
+.em-discount-amount {
+    font-weight: 700;
+}
+
+.em-price-total {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    margin-top: 15px;
+    border-top: 2px solid #eee;
+}
+
+.em-price-total span:first-child {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.em-total-amount {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #ffd700;
+    text-shadow: 0 2px 10px rgba(255,215,0,0.3);
+}
+
+/* Book Button */
+.em-btn-book {
+    background: linear-gradient(135deg, #ffd700 0%, #e6c200 100%);
+    color: #000;
+    padding: 20px 40px;
+    border-radius: 60px;
+    font-weight: 800;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.em-btn-book:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(255,215,0,0.4);
+    color: #000;
+}
+
+.em-btn-book:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Form Footer Trust Items */
+.em-form-footer {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px solid #eee;
+}
+
+.em-trust-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #888;
+    font-size: 0.85rem;
+}
+
+.em-trust-item i {
+    color: #28a745;
+}
+
+/* ========== BENEFITS SECTION ========== */
+.benefits-section {
+    background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+    color: #fff;
+    padding: 100px 0;
+}
+
+.benefit-item {
+    text-align: center;
+    padding: 35px;
+    transition: transform 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-10px);
+}
+
+.benefit-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, rgba(255,215,0,0.2), rgba(255,215,0,0.05));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    font-size: 2rem;
+    transition: all 0.3s ease;
+}
+
+.benefit-item:hover .benefit-icon {
+    background: #ffd700;
+    transform: scale(1.1);
+}
+
+.benefit-item h6 {
+    font-weight: 800;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+}
+
+.benefit-item p {
+    color: #888;
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.7;
+}
+
+/* ========== MODAL STYLES ========== */
+.success-checkmark {
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    margin: 0 auto 25px auto;
+    box-shadow: 0 15px 35px rgba(40,167,69,0.3);
+    animation: em-success-pop 0.5s ease;
+}
+
+@keyframes em-success-pop {
+    0% { transform: scale(0); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.error-cross {
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(135deg, #dc3545, #fd7e14);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    font-weight: bold;
+    margin: 0 auto 25px auto;
+    box-shadow: 0 15px 35px rgba(220,53,69,0.3);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 991px) {
+    .em-hero-title {
+        font-size: 3rem;
+    }
+    
+    .em-hero-stats {
+        gap: 25px;
+    }
+    
+    .em-booking-preview {
+        min-height: 400px;
+    }
+    
+    .em-booking-form-wrapper {
+        padding: 35px;
+    }
+}
+
+@media (max-width: 767px) {
+    .rent-hero {
+        min-height: auto;
+        padding: 80px 0;
+    }
+    
+    .em-hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .em-hero-stats {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+    .em-hero-stat {
+        flex: 1 0 30%;
+    }
+    
+    .em-form-footer {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .em-preview-features {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}

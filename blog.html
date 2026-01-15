@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EM Luxury Cars - Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blog.css">
+</head>
+<body id="em-body">
+
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand-lg fixed-top em-navbar">
+        <div class="container">
+            <a class="navbar-brand em-brand" href="index.html">EM<span class="em-accent">.</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#emNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="emNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link em-nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link em-nav-link" href="about.html">About</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link em-nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Shop NOW</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="inventory.html">Buy Cars</a></li>
+                            <li><a class="dropdown-item" href="rent.html">Rent a Car</a></li>
+                            <li><a class="dropdown-item" href="parts.html">Car Parts</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link em-nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link em-nav-link active" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link em-nav-link" href="testimonials.html">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link em-nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="checkout.html" class="btn em-btn-primary position-relative">
+                            Cart <span id="em-cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                        </a>
+                    </li>
+                    
+                    <!-- User Account -->
+                    <li class="nav-item dropdown ms-lg-2" id="userNavItem">
+                        <a class="nav-link em-nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="userNavLink">
+                            <i class="bi bi-person-circle"></i> Account
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="signin.html" id="navSignIn">Sign In</a></li>
+                            <li><a class="dropdown-item" href="signup.html" id="navSignUp">Sign Up</a></li>
+                            <li class="d-none" id="navDashboardItem"><a class="dropdown-item" href="dashboard.html">Dashboard</a></li>
+                            <li class="d-none" id="navLogoutItem"><a class="dropdown-item" href="#" onclick="logout()">Logout</a></li>
+                        </ul>
+                    </li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="em-blog-hero">
+        <div class="container text-center text-white">
+            <span class="em-section-subtitle" style="color: #ffd700;">Automotive Insights</span>
+            <h1 class="display-3 fw-bold mb-3">The EM Blog</h1>
+            <p class="lead text-secondary mb-0">News, guides, and stories from the world of luxury automobiles</p>
+        </div>
+    </header>
+
+    <!-- FEATURED POST -->
+    <section class="py-5">
+        <div class="container">
+            <div class="em-blog-featured">
+                <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=1920&q=80" alt="Featured">
+                <div class="em-blog-featured-overlay">
+                    <span class="em-blog-category">Featured</span>
+                    <h2 class="display-5 fw-bold mb-3">The New Lamborghini Revuelto: A Hybrid Revolution</h2>
+                    <p class="mb-4" style="max-width: 600px;">Discover how Lamborghini's first V12 hybrid supercar combines 1,015 horsepower with cutting-edge technology to create the ultimate driving experience.</p>
+                    <a href="#" class="btn-hero btn-hero-primary">Read Full Article</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG CONTENT -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Main Content -->
+                <div class="col-lg-8">
+                    <div class="row g-4">
+                        <!-- Article 1 -->
+                        <div class="col-md-6">
+                            <article class="em-blog-card">
+                                <img src="https://images.unsplash.com/photo-1616788494707-ec28f08d05a1?auto=format&fit=crop&q=80&w=600" class="em-blog-img" alt="V12 Engine">
+                                <div class="em-blog-body">
+                                    <span class="em-blog-category">Technology</span>
+                                    <h3 class="em-blog-title">The Future of V12 Engines</h3>
+                                    <p class="em-blog-excerpt">As the world moves to electric, we explore how Lamborghini and Ferrari are keeping the soul of the V12 alive.</p>
+                                    <a href="#" class="em-read-more">Read More →</a>
+                                    <div class="em-blog-meta">
+                                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="em-blog-author-img" alt="Author">
+                                        <div>
+                                            <div class="em-blog-author-name">Michael Sterling</div>
+                                            <div class="em-blog-date">Jan 10, 2026</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Article 2 -->
+                        <div class="col-md-6">
+                            <article class="em-blog-card">
+                                <img src="https://images.unsplash.com/photo-1495856458515-0637185db551?auto=format&fit=crop&q=80&w=600" class="em-blog-img" alt="Classic Car">
+                                <div class="em-blog-body">
+                                    <span class="em-blog-category">Maintenance</span>
+                                    <h3 class="em-blog-title">Caring for Classics</h3>
+                                    <p class="em-blog-excerpt">A comprehensive guide on how to store and maintain your vintage collection during the winter months.</p>
+                                    <a href="#" class="em-read-more">Read More →</a>
+                                    <div class="em-blog-meta">
+                                        <img src="https://randomuser.me/api/portraits/men/85.jpg" class="em-blog-author-img" alt="Author">
+                                        <div>
+                                            <div class="em-blog-author-name">James Harrison</div>
+                                            <div class="em-blog-date">Jan 8, 2026</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Article 3 -->
+                        <div class="col-md-6">
+                            <article class="em-blog-card">
+                                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=600" class="em-blog-img" alt="Porsche">
+                                <div class="em-blog-body">
+                                    <span class="em-blog-category">Reviews</span>
+                                    <h3 class="em-blog-title">Porsche 911 GT3 RS: Track Day Ready</h3>
+                                    <p class="em-blog-excerpt">We take the new GT3 RS to the track to see if it lives up to the legendary 911 heritage.</p>
+                                    <a href="#" class="em-read-more">Read More →</a>
+                                    <div class="em-blog-meta">
+                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="em-blog-author-img" alt="Author">
+                                        <div>
+                                            <div class="em-blog-author-name">Sarah Connor</div>
+                                            <div class="em-blog-date">Jan 5, 2026</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Article 4 -->
+                        <div class="col-md-6">
+                            <article class="em-blog-card">
+                                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80&w=600" class="em-blog-img" alt="Interior">
+                                <div class="em-blog-body">
+                                    <span class="em-blog-category">Lifestyle</span>
+                                    <h3 class="em-blog-title">The Art of Luxury Interiors</h3>
+                                    <p class="em-blog-excerpt">From hand-stitched leather to carbon fiber trim, exploring what makes a truly luxurious cabin.</p>
+                                    <a href="#" class="em-read-more">Read More →</a>
+                                    <div class="em-blog-meta">
+                                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="em-blog-author-img" alt="Author">
+                                        <div>
+                                            <div class="em-blog-author-name">Michael Sterling</div>
+                                            <div class="em-blog-date">Jan 2, 2026</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Article 5 -->
+                        <div class="col-md-6">
+                            <article class="em-blog-card">
+                                <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&q=80&w=600" class="em-blog-img" alt="Ferrari">
+                                <div class="em-blog-body">
+                                    <span class="em-blog-category">Investment</span>
+                                    <h3 class="em-blog-title">Classic Ferraris as Investment</h3>
+                                    <p class="em-blog-excerpt">Which vintage Ferraris are appreciating the fastest and how to spot a good investment opportunity.</p>
+                                    <a href="#" class="em-read-more">Read More →</a>
+                                    <div class="em-blog-meta">
+                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="em-blog-author-img" alt="Author">
+                                        <div>
+                                            <div class="em-blog-author-name">Sarah Connor</div>
+                                            <div class="em-blog-date">Dec 28, 2025</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Article 6 -->
+                        <div class="col-md-6">
+                            <article class="em-blog-card">
+                                <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=600" class="em-blog-img" alt="Supercar">
+                                <div class="em-blog-body">
+                                    <span class="em-blog-category">Buying Guide</span>
+                                    <h3 class="em-blog-title">First Supercar Buying Guide</h3>
+                                    <p class="em-blog-excerpt">Everything you need to know before purchasing your first exotic car, from insurance to maintenance.</p>
+                                    <a href="#" class="em-read-more">Read More →</a>
+                                    <div class="em-blog-meta">
+                                        <img src="https://randomuser.me/api/portraits/men/85.jpg" class="em-blog-author-img" alt="Author">
+                                        <div>
+                                            <div class="em-blog-author-name">James Harrison</div>
+                                            <div class="em-blog-date">Dec 25, 2025</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <nav class="em-pagination" id="blogPagination">
+                        <a href="#" class="em-page-link disabled" data-page="prev">
+                            <i class="bi bi-chevron-left"></i> Prev
+                        </a>
+                        <a href="#" class="em-page-link active" data-page="1">1</a>
+                        <a href="#" class="em-page-link" data-page="2">2</a>
+                        <a href="#" class="em-page-link" data-page="3">3</a>
+                        <a href="#" class="em-page-link" data-page="next">
+                            Next <i class="bi bi-chevron-right"></i>
+                        </a>
+                    </nav>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <!-- Search Widget -->
+                    <div class="em-sidebar-widget">
+                        <h4 class="em-sidebar-title">Search</h4>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="blogSearchInput" placeholder="Search articles...">
+                            <button class="btn" type="button" id="blogSearchBtn">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Categories Widget -->
+                    <div class="em-sidebar-widget">
+                        <h4 class="em-sidebar-title">Categories</h4>
+                        <ul class="em-category-list">
+                            <li><a href="#" class="category-filter" data-category="all">All Articles</a> <span class="em-category-count">54</span></li>
+                            <li><a href="#" class="category-filter" data-category="technology">Technology</a> <span class="em-category-count">12</span></li>
+                            <li><a href="#" class="category-filter" data-category="reviews">Reviews</a> <span class="em-category-count">8</span></li>
+                            <li><a href="#" class="category-filter" data-category="maintenance">Maintenance</a> <span class="em-category-count">15</span></li>
+                            <li><a href="#" class="category-filter" data-category="lifestyle">Lifestyle</a> <span class="em-category-count">6</span></li>
+                            <li><a href="#" class="category-filter" data-category="investment">Investment</a> <span class="em-category-count">4</span></li>
+                            <li><a href="#" class="category-filter" data-category="buying guide">Buying Guide</a> <span class="em-category-count">9</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Popular Posts Widget -->
+                    <div class="em-sidebar-widget">
+                        <h4 class="em-sidebar-title">Popular Posts</h4>
+                        <div class="em-popular-post">
+                            <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=200&q=80" alt="Post">
+                            <div>
+                                <h6>Lamborghini Revuelto Review</h6>
+                                <span>15.2K views</span>
+                            </div>
+                        </div>
+                        <div class="em-popular-post">
+                            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=200&q=80" alt="Post">
+                            <div>
+                                <h6>Best Track Day Cars 2026</h6>
+                                <span>12.8K views</span>
+                            </div>
+                        </div>
+                        <div class="em-popular-post">
+                            <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=200&q=80" alt="Post">
+                            <div>
+                                <h6>Ferrari 250 GTO History</h6>
+                                <span>10.5K views</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tags Widget -->
+                    <div class="em-sidebar-widget">
+                        <h4 class="em-sidebar-title">Tags</h4>
+                        <div>
+                            <a href="#" class="em-tag">Ferrari</a>
+                            <a href="#" class="em-tag">Lamborghini</a>
+                            <a href="#" class="em-tag">Porsche</a>
+                            <a href="#" class="em-tag">V12</a>
+                            <a href="#" class="em-tag">Hybrid</a>
+                            <a href="#" class="em-tag">Classic</a>
+                            <a href="#" class="em-tag">Supercar</a>
+                            <a href="#" class="em-tag">Track Day</a>
+                        </div>
+                    </div>
+
+                    <!-- Newsletter Widget -->
+                    <div class="em-sidebar-widget em-newsletter-widget">
+                        <h4 class="em-sidebar-title">Newsletter</h4>
+                        <p class="small text-secondary mb-3">Subscribe for exclusive content and early access to new articles.</p>
+                        <input type="email" class="form-control mb-3" id="newsletterEmail" placeholder="Your email address">
+                        <button class="em-newsletter-btn" id="newsletterBtn">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="em-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-white fw-bold mb-3">EM Luxury Cars</h5>
+                    <p>The premier destination for automotive excellence. Buying, renting, and upgrading - we do it all with passion and precision.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-white fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="inventory.html" class="text-muted">Inventory</a></li>
+                        <li class="mb-2"><a href="rent.html" class="text-muted">Rentals</a></li>
+                        <li class="mb-2"><a href="parts.html" class="text-muted">Parts Shop</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-muted">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-white fw-bold mb-3">Contact</h5>
+                    <p class="text-muted">123 Luxury Blvd, Beverly Hills<br>California, USA<br><br><strong>Phone:</strong> +1 (555) 123-4567<br><strong>Email:</strong> info@emcars.com</p>
+                </div>
+            </div>
+            <div class="text-center mt-4 pt-4 border-top border-secondary">
+                <p class="mb-0 text-muted small">&copy; 2026 EM Luxury Cars. Created for Web Technologies Project.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/pages/blog.js"></script>
+</body>
+</html>

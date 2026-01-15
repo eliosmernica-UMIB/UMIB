@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EM Luxury Cars - Home</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body id="em-body">
+
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand-lg fixed-top em-navbar">
+        <div class="container">
+            <a class="navbar-brand em-brand" href="index.html">EM<span class="em-accent">.</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#emNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="emNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link em-nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link em-nav-link" href="about.html">About</a></li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link em-nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Shop NOW</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="inventory.html">Buy Cars</a></li>
+                            <li><a class="dropdown-item" href="rent.html">Rent a Car</a></li>
+                            <li><a class="dropdown-item" href="parts.html">Car Parts</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link em-nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link em-nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link em-nav-link" href="testimonials.html">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link em-nav-link" href="contact.html">Contact</a></li>
+                    
+                    <li class="nav-item ms-lg-3">
+                        <a href="checkout.html" class="btn em-btn-primary position-relative">
+                            Cart
+                            <span id="em-cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                        </a>
+                    </li>
+                    
+                    <!-- User Account -->
+                    <li class="nav-item dropdown ms-lg-2" id="userNavItem">
+                        <a class="nav-link em-nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="userNavLink">
+                            <i class="bi bi-person-circle"></i> Account
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="signin.html" id="navSignIn">Sign In</a></li>
+                            <li><a class="dropdown-item" href="signup.html" id="navSignUp">Sign Up</a></li>
+                            <li class="d-none" id="navDashboardItem"><a class="dropdown-item" href="dashboard.html">Dashboard</a></li>
+                            <li class="d-none" id="navLogoutItem"><a class="dropdown-item" href="#" onclick="logout()">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CAROUSEL HERO SECTION -->
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active em-hero" data-bs-interval="5000" style="background-image: url('https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&q=80&w=1920');">
+                <div class="em-overlay"></div>
+                <div class="container em-hero-content">
+                    <span class="em-hero-subtitle">The Ultimate Driving Machine</span>
+                    <h1 class="em-title-large">Exotic Performance</h1>
+                    <p class="lead">Experience the thrill of the Lamborghini Revuelto. Precision engineering meets artistic design.</p>
+                    
+                    <div class="hero-btn-group">
+                        <a href="inventory.html" class="btn-hero btn-hero-primary">View Collection</a>
+                        <a href="about.html" class="btn-hero btn-hero-outline">Our Story</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="carousel-item em-hero" data-bs-interval="5000" style="background-image: url('https://images.unsplash.com/photo-1592198084033-aade902d1aae?auto=format&fit=crop&q=80&w=1920');">
+                <div class="em-overlay"></div>
+                <div class="container em-hero-content">
+                    <span class="em-hero-subtitle">History in Motion</span>
+                    <h1 class="em-title-large">Timeless Classics</h1>
+                    <p class="lead">Invest in history with our vintage collection. Restored to perfection for the discerning collector.</p>
+                    
+                    <div class="hero-btn-group">
+                        <a href="rent.html" class="btn-hero btn-hero-primary">Rent Now</a>
+                        <a href="gallery.html" class="btn-hero btn-hero-outline">View Gallery</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- WHY CHOOSE US SECTION -->
+    <section class="em-why-choose py-5">
+        <div class="container py-5">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <span class="em-section-subtitle">Our Advantages</span>
+                    <h2 class="em-section-title">Why Choose EM?</h2>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="em-feature-card">
+                        <div class="em-feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                            </svg>
+                        </div>
+                        <h3 class="em-feature-title">Premium Sales</h3>
+                        <p class="em-feature-text">Access to the world's most exclusive inventory of hypercars and limited edition vehicles from top manufacturers.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="em-feature-card">
+                        <div class="em-feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.25-14.75v1.5a.25.25 0 0 1-.5 0v-1.5a.25.25 0 0 1 .5 0zm0 12v1.5a.25.25 0 0 1-.5 0v-1.5a.25.25 0 0 1 .5 0zM4.5 8a.25.25 0 0 1-.25.25h-1.5a.25.25 0 0 1 0-.5h1.5A.25.25 0 0 1 4.5 8zm9.75.25a.25.25 0 0 1 0-.5h1.5a.25.25 0 0 1 0 .5h-1.5zM8 13a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-2a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                            </svg>
+                        </div>
+                        <h3 class="em-feature-title">Luxury Rentals</h3>
+                        <p class="em-feature-text">Drive your dream car for a weekend or a month with our white-glove rental service and 24/7 concierge support.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="em-feature-card">
+                        <div class="em-feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="em-feature-title">Genuine Parts</h3>
+                        <p class="em-feature-text">OEM and performance parts for maintenance and upgrades, verified for authenticity with worldwide shipping.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATISTICS SECTION -->
+    <section class="em-stats-section">
+        <div class="em-stats-overlay"></div>
+        <div class="container position-relative">
+            <div class="row text-center">
+                <div class="col-6 col-lg-3 mb-4 mb-lg-0">
+                    <div class="em-stat-item">
+                        <span class="em-stat-number">500+</span>
+                        <span class="em-stat-label">Cars Sold</span>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 mb-4 mb-lg-0">
+                    <div class="em-stat-item">
+                        <span class="em-stat-number">15+</span>
+                        <span class="em-stat-label">Years Experience</span>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="em-stat-item">
+                        <span class="em-stat-number">50+</span>
+                        <span class="em-stat-label">Premium Brands</span>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="em-stat-item">
+                        <span class="em-stat-number">2000+</span>
+                        <span class="em-stat-label">Happy Clients</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED CARS SECTION -->
+    <section class="em-featured-cars py-5">
+        <div class="container py-5">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <span class="em-section-subtitle">Our Collection</span>
+                    <h2 class="em-section-title">Featured Vehicles</h2>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="em-car-card">
+                        <div class="em-car-badge">New Arrival</div>
+                        <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=600&q=80" alt="Lamborghini" class="em-car-img">
+                        <div class="em-car-body">
+                            <span class="em-car-brand">Lamborghini</span>
+                            <h3 class="em-car-name">Revuelto V12</h3>
+                            <div class="em-car-specs">
+                                <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/></svg> 2024</span>
+                                <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5c0 .538-.012 1.05-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33.076 33.076 0 0 1 2.5.5zm.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935zm10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935zM3.504 1c.007.517.026 1.006.056 1.469.13 2.028.457 3.546.87 4.667C5.294 9.48 6.484 10 7 10a.5.5 0 0 1 .5.5v2.61a1 1 0 0 1-.757.97l-1.426.356a.5.5 0 0 0-.179.085L4.5 15h7l-.638-.479a.501.501 0 0 0-.18-.085l-1.425-.356a1 1 0 0 1-.757-.97V10.5A.5.5 0 0 1 9 10c.516 0 1.706-.52 2.57-2.864.413-1.12.74-2.64.87-4.667.03-.463.049-.952.056-1.469H3.504z"/></svg> 1015 HP</span>
+                                <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z"/><path fill-rule="evenodd" d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z"/></svg> 217 mph</span>
+                            </div>
+                            <div class="em-car-footer">
+                                <span class="em-car-price">$608,000</span>
+                                <a href="inventory.html" class="em-btn-sm">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="em-car-card">
+                        <div class="em-car-badge em-badge-hot">Hot Deal</div>
+                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=600&q=80" alt="Porsche" class="em-car-img">
+                        <div class="em-car-body">
+                            <span class="em-car-brand">Porsche</span>
+                            <h3 class="em-car-name">911 GT3 RS</h3>
+                            <div class="em-car-specs">
+                                <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/></svg> 2024</span>
+                                <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5c0 .538-.012 1.05-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33.076 33.076 0 0 1 2.5.5zm.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935zm10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935zM3.504 1c.007.517.026 1.006.056 1.469.13 2.028.457 3.546.87 4.667C5.294 9.48 6.484 10 7 10a.5.5 0 0 1 .5.5v2.61a1 1 0 0 1-.757.97l-1.426.356a.5.5 0 0 0-.179.085L4.5 15h7l-.638-.479a.501.501 0 0 0-.18-.085l-1.425-.356a1 1 0 0 1-.757-.97V10.5A.5.5 0 0 1 9 10c.516 0 1.706-.52 2.57-2.864.413-1.12.74-2.64.87-4.667.03-.463.049-.952.056-1.469H3.504z"/></svg> 518 HP</span>
+                                <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z"/><path fill-rule="evenodd" d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z"/></svg> 184 mph</span>
+                            </div>
+                            <div class="em-car-footer">
+                                <span class="em-car-price">$223,800</span>
+                                <a href="inventory.html" class="em-btn-sm">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="em-car-card">
+                        <div class="em-car-badge">Premium</div>
+                        <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=600&q=80" alt="BMW" class="em-car-img">
+                        <div class="em-car-body">
+                            <span class="em-car-brand">BMW</span>
+                            <h3 class="em-car-name">M8 Competition</h3>
+                            <div class="em-car-specs">
+                                <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/></svg> 2024</span>
+                                <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5c0 .538-.012 1.05-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33.076 33.076 0 0 1 2.5.5zm.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935zm10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935zM3.504 1c.007.517.026 1.006.056 1.469.13 2.028.457 3.546.87 4.667C5.294 9.48 6.484 10 7 10a.5.5 0 0 1 .5.5v2.61a1 1 0 0 1-.757.97l-1.426.356a.5.5 0 0 0-.179.085L4.5 15h7l-.638-.479a.501.501 0 0 0-.18-.085l-1.425-.356a1 1 0 0 1-.757-.97V10.5A.5.5 0 0 1 9 10c.516 0 1.706-.52 2.57-2.864.413-1.12.74-2.64.87-4.667.03-.463.049-.952.056-1.469H3.504z"/></svg> 617 HP</span>
+                                <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z"/><path fill-rule="evenodd" d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z"/></svg> 190 mph</span>
+                            </div>
+                            <div class="em-car-footer">
+                                <span class="em-car-price">$130,000</span>
+                                <a href="inventory.html" class="em-btn-sm">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="inventory.html" class="em-btn-primary">View All Vehicles</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="em-services-section py-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-5 mb-lg-0">
+                    <span class="em-section-subtitle">What We Offer</span>
+                    <h2 class="em-section-title">Premium Services</h2>
+                    <p class="text-muted mb-4">We provide comprehensive automotive services tailored to meet the needs of discerning clients who demand excellence in every detail.</p>
+                    <ul class="em-service-list">
+                        <li><span class="em-check-icon">✓</span> Vehicle Inspection & Certification</li>
+                        <li><span class="em-check-icon">✓</span> Custom Financing Solutions</li>
+                        <li><span class="em-check-icon">✓</span> Worldwide Delivery Service</li>
+                        <li><span class="em-check-icon">✓</span> Extended Warranty Programs</li>
+                        <li><span class="em-check-icon">✓</span> Trade-In & Consignment</li>
+                    </ul>
+                    <a href="about.html" class="em-btn-primary mt-4">Learn More</a>
+                </div>
+                <div class="col-lg-7">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="em-service-card">
+                                <div class="em-service-icon">🚗</div>
+                                <h4>Buy a Car</h4>
+                                <p>Browse our curated collection of exotic and luxury vehicles.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="em-service-card">
+                                <div class="em-service-icon">🔑</div>
+                                <h4>Rent a Car</h4>
+                                <p>Experience luxury with our flexible rental programs.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="em-service-card">
+                                <div class="em-service-icon">⚙️</div>
+                                <h4>Car Parts</h4>
+                                <p>Genuine OEM parts and performance upgrades.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="em-service-card">
+                                <div class="em-service-icon">🛠️</div>
+                                <h4>Maintenance</h4>
+                                <p>Expert care for your prized possession.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA BANNER SECTION -->
+    <section class="em-cta-section">
+        <div class="em-cta-overlay"></div>
+        <div class="container position-relative text-center">
+            <span class="em-cta-subtitle">Ready to Experience Luxury?</span>
+            <h2 class="em-cta-title">Find Your Dream Car Today</h2>
+            <p class="em-cta-text">Join thousands of satisfied customers who found their perfect vehicle with EM Luxury Cars.</p>
+            <div class="em-cta-buttons">
+                <a href="inventory.html" class="btn-hero btn-hero-primary">Browse Inventory</a>
+                <a href="contact.html" class="btn-hero btn-hero-outline">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS PREVIEW SECTION -->
+    <section class="em-testimonials-preview py-5">
+        <div class="container py-5">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <span class="em-section-subtitle">Client Reviews</span>
+                    <h2 class="em-section-title">What Our Clients Say</h2>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="em-testimonial-card">
+                        <div class="em-testimonial-rating">★★★★★</div>
+                        <p class="em-testimonial-text">"The team at EM made buying my dream Porsche an absolute pleasure. Professional service from start to finish."</p>
+                        <div class="em-testimonial-author">
+                            <div class="em-testimonial-avatar">JD</div>
+                            <div>
+                                <strong>James Davidson</strong>
+                                <span>Porsche 911 Owner</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="em-testimonial-card">
+                        <div class="em-testimonial-rating">★★★★★</div>
+                        <p class="em-testimonial-text">"Rented a Lamborghini for my anniversary. The experience was unforgettable. Will definitely be back!"</p>
+                        <div class="em-testimonial-author">
+                            <div class="em-testimonial-avatar">SM</div>
+                            <div>
+                                <strong>Sarah Mitchell</strong>
+                                <span>Rental Client</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="em-testimonial-card">
+                        <div class="em-testimonial-rating">★★★★★</div>
+                        <p class="em-testimonial-text">"Best selection of genuine parts I've found. Fast shipping and excellent customer support."</p>
+                        <div class="em-testimonial-author">
+                            <div class="em-testimonial-avatar">MR</div>
+                            <div>
+                                <strong>Michael Roberts</strong>
+                                <span>Parts Customer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="testimonials.html" class="em-btn-outline">Read All Reviews</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER SECTION -->
+    <section class="em-newsletter-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h3 class="em-newsletter-title">Stay Updated</h3>
+                    <p class="em-newsletter-text">Subscribe to our newsletter for exclusive deals, new arrivals, and automotive news.</p>
+                </div>
+                <div class="col-lg-6">
+                    <form class="em-newsletter-form">
+                        <input type="email" placeholder="Enter your email address" class="em-newsletter-input" required>
+                        <button type="submit" class="em-newsletter-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="em-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-white fw-bold mb-3">EM Luxury Cars</h5>
+                    <p>The premier destination for automotive excellence. Buying, renting, and upgrading - we do it all with passion and precision.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-white fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="inventory.html" class="text-decoration-none text-muted hover-white">Inventory</a></li>
+                        <li class="mb-2"><a href="rent.html" class="text-decoration-none text-muted hover-white">Rentals</a></li>
+                        <li class="mb-2"><a href="parts.html" class="text-decoration-none text-muted hover-white">Parts Shop</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-decoration-none text-muted hover-white">Contact Us</a></li>
+                        <li class="mb-2"><a href="faq.html" class="text-decoration-none text-muted hover-white">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-white fw-bold mb-3">Contact</h5>
+                    <p class="text-muted">
+                        123 Luxury Blvd, Beverly Hills<br>
+                        California, USA<br>
+                        <br>
+                        <strong>Phone:</strong> +1 (555) 123-4567<br>
+                        <strong>Email:</strong> info@emcars.com
+                    </p>
+                </div>
+            </div>
+            <div class="text-center mt-4 pt-4 border-top border-secondary">
+                <p class="mb-0 text-muted small">&copy; 2026 EM Luxury Cars. Created for Web Technologies Project.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/pages/index.js"></script>
+</body>
+</html>

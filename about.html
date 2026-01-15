@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EM Luxury Cars - About</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body id="em-body">
+
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand-lg fixed-top em-navbar">
+        <div class="container">
+            <a class="navbar-brand em-brand" href="index.html">EM<span class="em-accent">.</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#emNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="emNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link em-nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link em-nav-link active" href="about.html">About</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link em-nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Shop NOW</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="inventory.html">Buy Cars</a></li>
+                            <li><a class="dropdown-item" href="rent.html">Rent a Car</a></li>
+                            <li><a class="dropdown-item" href="parts.html">Car Parts</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link em-nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link em-nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link em-nav-link" href="testimonials.html">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link em-nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="checkout.html" class="btn em-btn-primary position-relative">
+                            Cart <span id="em-cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                        </a>
+                    </li>
+                    
+                    <!-- User Account -->
+                    <li class="nav-item dropdown ms-lg-2" id="userNavItem">
+                        <a class="nav-link em-nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="userNavLink">
+                            <i class="bi bi-person-circle"></i> Account
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="signin.html" id="navSignIn">Sign In</a></li>
+                            <li><a class="dropdown-item" href="signup.html" id="navSignUp">Sign Up</a></li>
+                            <li class="d-none" id="navDashboardItem"><a class="dropdown-item" href="dashboard.html">Dashboard</a></li>
+                            <li class="d-none" id="navLogoutItem"><a class="dropdown-item" href="#" onclick="logout()">Logout</a></li>
+                        </ul>
+                    </li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="em-about-hero">
+        <div class="container position-relative text-center text-white">
+            <span class="em-section-subtitle" style="color: #ffd700;">Since 2010</span>
+            <h1 class="display-2 fw-bold mb-4">Our Story</h1>
+            <p class="lead mb-0" style="max-width: 600px; margin: 0 auto;">Driven by passion, defined by excellence. We connect the world's most passionate drivers with extraordinary machines.</p>
+        </div>
+    </header>
+
+    <!-- ABOUT CONTENT -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1485291571150-772bcfc10da5?auto=format&fit=crop&q=80&w=800" class="img-fluid rounded-4 shadow-lg" alt="Showroom">
+                </div>
+                <div class="col-lg-6">
+                    <span class="em-section-subtitle">Who We Are</span>
+                    <h2 class="em-section-title">More Than a Dealership</h2>
+                    <p class="lead text-dark mb-4">We started with a simple mission: to connect the world's most passionate drivers with the world's most extraordinary machines.</p>
+                    <p class="text-muted mb-4">EM Luxury Cars isn't just a dealership; it's a curator of automotive history and future technology. Whether you're looking for the raw mechanical purity of the 60s or the hybrid hyper-performance of today, we have it.</p>
+                    <div class="row g-4 mt-2">
+                        <div class="col-6">
+                            <div class="p-4 bg-light rounded-4 text-center">
+                                <h2 class="fw-bold mb-1" style="color: #ffd700;">500+</h2>
+                                <p class="text-uppercase small fw-bold mb-0">Cars Sold</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-4 bg-light rounded-4 text-center">
+                                <h2 class="fw-bold mb-1" style="color: #ffd700;">100%</h2>
+                                <p class="text-uppercase small fw-bold mb-0">Satisfaction</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-4 bg-light rounded-4 text-center">
+                                <h2 class="fw-bold mb-1" style="color: #ffd700;">15+</h2>
+                                <p class="text-uppercase small fw-bold mb-0">Years Experience</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-4 bg-light rounded-4 text-center">
+                                <h2 class="fw-bold mb-1" style="color: #ffd700;">50+</h2>
+                                <p class="text-uppercase small fw-bold mb-0">Brands</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR VALUES -->
+    <section class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <span class="em-section-subtitle">What Drives Us</span>
+                <h2 class="em-section-title">Our Core Values</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="em-value-card">
+                        <div class="em-value-icon">🎯</div>
+                        <h4 class="fw-bold mb-3">Excellence</h4>
+                        <p class="text-muted mb-0">We strive for perfection in every transaction, ensuring each client receives exceptional service.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="em-value-card">
+                        <div class="em-value-icon">🤝</div>
+                        <h4 class="fw-bold mb-3">Integrity</h4>
+                        <p class="text-muted mb-0">Transparency and honesty are the foundation of our business relationships.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="em-value-card">
+                        <div class="em-value-icon">💎</div>
+                        <h4 class="fw-bold mb-3">Quality</h4>
+                        <p class="text-muted mb-0">Every vehicle in our collection meets the highest standards of authenticity and condition.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="em-value-card">
+                        <div class="em-value-icon">❤️</div>
+                        <h4 class="fw-bold mb-3">Passion</h4>
+                        <p class="text-muted mb-0">Our love for automobiles drives everything we do, from selection to delivery.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <span class="em-section-subtitle">Our Journey</span>
+                <h2 class="em-section-title">Company Timeline</h2>
+            </div>
+            <div class="em-timeline">
+                <div class="em-timeline-item">
+                    <div class="em-timeline-dot"></div>
+                    <div class="em-timeline-content">
+                        <h4 class="fw-bold" style="color: #ffd700;">2010</h4>
+                        <h5 class="fw-bold">The Beginning</h5>
+                        <p class="text-muted mb-0">Founded in a small garage with just 3 classic cars and a dream to revolutionize luxury car sales.</p>
+                    </div>
+                </div>
+                <div class="em-timeline-item">
+                    <div class="em-timeline-dot"></div>
+                    <div class="em-timeline-content">
+                        <h4 class="fw-bold" style="color: #ffd700;">2015</h4>
+                        <h5 class="fw-bold">Expansion</h5>
+                        <p class="text-muted mb-0">Opened our flagship showroom in Beverly Hills and launched our rental division.</p>
+                    </div>
+                </div>
+                <div class="em-timeline-item">
+                    <div class="em-timeline-dot"></div>
+                    <div class="em-timeline-content">
+                        <h4 class="fw-bold" style="color: #ffd700;">2020</h4>
+                        <h5 class="fw-bold">Going Global</h5>
+                        <p class="text-muted mb-0">Expanded operations internationally with shipping to over 50 countries worldwide.</p>
+                    </div>
+                </div>
+                <div class="em-timeline-item">
+                    <div class="em-timeline-dot"></div>
+                    <div class="em-timeline-content">
+                        <h4 class="fw-bold" style="color: #ffd700;">2024</h4>
+                        <h5 class="fw-bold">Digital Innovation</h5>
+                        <p class="text-muted mb-0">Launched our online platform, making exotic car shopping accessible to enthusiasts everywhere.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM SECTION -->
+    <section class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <span class="em-section-subtitle">The People</span>
+                <h2 class="em-section-title">Meet Our Experts</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="em-team-card">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="em-team-img" alt="CEO">
+                        <div class="em-team-body">
+                            <h4 class="fw-bold mb-1">Michael Sterling</h4>
+                            <p class="text-muted small text-uppercase mb-3">Founder & CEO</p>
+                            <p class="text-muted small mb-3">25+ years in luxury automotive. Former Ferrari brand manager with a passion for classics.</p>
+                            <div class="em-team-social">
+                                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg></a>
+                                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/></svg></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="em-team-card">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="em-team-img" alt="Sales Director">
+                        <div class="em-team-body">
+                            <h4 class="fw-bold mb-1">Sarah Connor</h4>
+                            <p class="text-muted small text-uppercase mb-3">Sales Director</p>
+                            <p class="text-muted small mb-3">Expert in client relations with an eye for matching collectors with their perfect vehicle.</p>
+                            <div class="em-team-social">
+                                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg></a>
+                                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.341 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/></svg></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="em-team-card">
+                        <img src="https://randomuser.me/api/portraits/men/85.jpg" class="em-team-img" alt="Head Mechanic">
+                        <div class="em-team-body">
+                            <h4 class="fw-bold mb-1">James Harrison</h4>
+                            <p class="text-muted small text-uppercase mb-3">Head Mechanic</p>
+                            <p class="text-muted small mb-3">Factory-trained technician with certifications from Ferrari, Lamborghini, and Porsche.</p>
+                            <div class="em-team-social">
+                                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg></a>
+                                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.341 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/></svg></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARTNERS SECTION -->
+    <section class="em-partners-section py-5">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <span class="em-section-subtitle">Trusted By</span>
+                <h2 class="em-section-title">Our Partners</h2>
+            </div>
+            <div class="row align-items-center justify-content-center g-5">
+                <div class="col-6 col-md-2 text-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Ferrari_official_logo.svg/200px-Ferrari_official_logo.svg.png" alt="Ferrari" class="em-partner-logo">
+                </div>
+                <div class="col-6 col-md-2 text-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Lamborghini_Logo.svg/200px-Lamborghini_Logo.svg.png" alt="Lamborghini" class="em-partner-logo">
+                </div>
+                <div class="col-6 col-md-2 text-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8c/Porsche_logo.svg/200px-Porsche_logo.svg.png" alt="Porsche" class="em-partner-logo">
+                </div>
+                <div class="col-6 col-md-2 text-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/200px-BMW.svg.png" alt="BMW" class="em-partner-logo">
+                </div>
+                <div class="col-6 col-md-2 text-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Mercedes-Logo.svg/200px-Mercedes-Logo.svg.png" alt="Mercedes" class="em-partner-logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="py-5" style="background: #000;">
+        <div class="container py-5 text-center">
+            <h2 class="display-5 fw-bold text-white mb-4">Ready to Find Your Dream Car?</h2>
+            <p class="lead text-secondary mb-5">Browse our exclusive collection or contact us for a personalized consultation.</p>
+            <div class="d-flex gap-3 justify-content-center flex-wrap">
+                <a href="inventory.html" class="btn-hero btn-hero-primary">View Inventory</a>
+                <a href="contact.html" class="btn-hero btn-hero-outline">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="em-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-white fw-bold mb-3">EM Luxury Cars</h5>
+                    <p>The premier destination for automotive excellence. Buying, renting, and upgrading - we do it all with passion and precision.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-white fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="inventory.html" class="text-muted">Inventory</a></li>
+                        <li class="mb-2"><a href="rent.html" class="text-muted">Rentals</a></li>
+                        <li class="mb-2"><a href="parts.html" class="text-muted">Parts Shop</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-muted">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-white fw-bold mb-3">Contact</h5>
+                    <p class="text-muted">123 Luxury Blvd, Beverly Hills<br>California, USA<br><br><strong>Phone:</strong> +1 (555) 123-4567<br><strong>Email:</strong> info@emcars.com</p>
+                </div>
+            </div>
+            <div class="text-center mt-4 pt-4 border-top border-secondary">
+                <p class="mb-0 text-muted small">&copy; 2026 EM Luxury Cars. Created for Web Technologies Project.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            updateUserNavigation();
+            
+            // Update cart badge
+            const cart = JSON.parse(localStorage.getItem('emCart')) || [];
+            const badge = document.getElementById('em-cart-count');
+            if (badge) {
+                const count = cart.reduce((total, item) => total + item.quantity, 0);
+                badge.innerText = count;
+            }
+        });
+    </script>
+</body>
+</html>

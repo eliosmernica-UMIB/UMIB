@@ -1,0 +1,90 @@
+/* =============================================
+   CONTACT.JS - Contact Page JavaScript (Enhanced)
+   ============================================= */
+
+// Form Validation with better UX
+(() => {
+    'use strict'
+    const forms = document.querySelectorAll('.needs-validation')
+    Array.from(forms).forEach(form => {
+        // Add focus animations to inputs
+        const inputs = form.querySelectorAll('.form-control');
+        inputs.forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.classList.add('em-focused');
+            });
+            input.addEventListener('blur', function() {
+                this.parentElement.classList.remove('em-focused');
+            });
+        });
+        
+        form.addEventListener('submit', event => {
+            if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+                
+                // Show error toast
+                if (typeof emShowToast === 'function') {
+                    emShowToast('Please fill in all required fields', 'error');
+                }
+            } else {
+                event.preventDefault();
+                
+                // Show loading state on button
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="bi bi-hourglass-split me-2"></i>Sending...';
+                submitBtn.disabled = true;
+                
+                // Simulate sending (in real app, this would be an API call)
+                setTimeout(() => {
+                    // Show success toast
+                    if (typeof emShowToast === 'function') {
+                        emShowToast('Message sent successfully! We\'ll respond within 24 hours.', 'success');
+                    } else {
+                        alert('Message Sent Successfully! We will get back to you within 24 hours.');
+                    }
+                    
+                    // Reset form
+                    form.reset();
+                    form.classList.remove('was-validated');
+                    
+                    // Reset button
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                }, 1500);
+            }
+            form.classList.add('was-validated')
+        }, false)
+    })
+})()
+
+// Live chat button animation
+document.addEventListener('DOMContentLoaded', () => {
+    updateUserNavigation();
+    
+    // Add animation to contact cards
+    const contactCards = document.querySelectorAll('.em-contact-card');
+    contactCards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.1}s`;
+    });
+    
+    // Add character counter to message textarea
+    const messageInput = document.getElementById('message');
+    if (messageInput) {
+        const maxLength = 1000;
+        const counter = document.createElement('small');
+        counter.className = 'text-muted float-end mt-1';
+        counter.textContent = `0/${maxLength}`;
+        messageInput.parentElement.appendChild(counter);
+        
+        messageInput.addEventListener('input', function() {
+            counter.textContent = `${this.value.length}/${maxLength}`;
+            if (this.value.length > maxLength * 0.9) {
+                counter.classList.add('text-warning');
+            } else {
+                counter.classList.remove('text-warning');
+            }
+        });
+    }
+});
