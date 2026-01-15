@@ -55,9 +55,14 @@
                             alert('Message Sent Successfully! We will get back to you within 24 hours.');
                         }
                         
-                        // Reset form
+                        // Reset form and remove validation classes
                         form.reset();
                         form.classList.remove('was-validated');
+                        
+                        // Remove validation styling from all inputs
+                        form.querySelectorAll('.is-invalid, .is-valid').forEach(el => {
+                            el.classList.remove('is-invalid', 'is-valid');
+                        });
                     } else {
                         throw new Error('Form submission failed');
                     }
