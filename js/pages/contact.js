@@ -2,7 +2,7 @@
    CONTACT.JS - Contact Page JavaScript (Enhanced)
    ============================================= */
 
-// Form Validation with better UX
+// Form Validation with Formspree submission
 (() => {
     'use strict'
     const forms = document.querySelectorAll('.needs-validation')
@@ -18,7 +18,7 @@
             });
         });
         
-        form.addEventListener('submit', event => {
+        form.addEventListener('submit', async event => {
             if (!form.checkValidity()) {
                 event.preventDefault()
                 event.stopPropagation()
@@ -36,23 +36,43 @@
                 submitBtn.innerHTML = '<i class="bi bi-hourglass-split me-2"></i>Sending...';
                 submitBtn.disabled = true;
                 
-                // Simulate sending (in real app, this would be an API call)
-                setTimeout(() => {
-                    // Show success toast
-                    if (typeof emShowToast === 'function') {
-                        emShowToast('Message sent successfully! We\'ll respond within 24 hours.', 'success');
+                // Submit to Formspree
+                try {
+                    const formData = new FormData(form);
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+                    
+                    if (response.ok) {
+                        // Show success toast
+                        if (typeof emShowToast === 'function') {
+                            emShowToast('Message sent successfully! We\'ll respond within 24 hours.', 'success');
+                        } else {
+                            alert('Message Sent Successfully! We will get back to you within 24 hours.');
+                        }
+                        
+                        // Reset form
+                        form.reset();
+                        form.classList.remove('was-validated');
                     } else {
-                        alert('Message Sent Successfully! We will get back to you within 24 hours.');
+                        throw new Error('Form submission failed');
                     }
-                    
-                    // Reset form
-                    form.reset();
-                    form.classList.remove('was-validated');
-                    
-                    // Reset button
-                    submitBtn.innerHTML = originalText;
-                    submitBtn.disabled = false;
-                }, 1500);
+                } catch (error) {
+                    // Show error toast
+                    if (typeof emShowToast === 'function') {
+                        emShowToast('Failed to send message. Please try again.', 'error');
+                    } else {
+                        alert('Failed to send message. Please try again.');
+                    }
+                }
+                
+                // Reset button
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
             }
             form.classList.add('was-validated')
         }, false)
