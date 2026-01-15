@@ -318,3 +318,143 @@
     color: #ffd700;
     transform: scale(1.15);
 }
+
+/* Responsive */
+@media (max-width: 992px) {
+    .em-reviews-hero {
+        min-height: 45vh;
+    }
+    
+    .em-review-card {
+        padding: 35px;
+    }
+    
+    .em-stats-number {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .em-reviews-hero {
+        min-height: 40vh;
+        margin-top: 60px;
+    }
+    
+    .em-review-card {
+        padding: 28px;
+        margin-bottom: 20px;
+    }
+    
+    .em-review-card::before {
+        font-size: 60px;
+        top: 10px;
+        right: 15px;
+    }
+    
+    .em-review-rating {
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+    }
+    
+    .em-review-title {
+        font-size: 1.15rem;
+    }
+    
+    .em-review-text {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+    
+    .em-review-author {
+        gap: 12px;
+        padding-top: 18px;
+    }
+    
+    .em-review-avatar {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .em-review-badge {
+        padding: 5px 12px;
+        font-size: 0.65rem;
+    }
+    
+    .em-stats-box {
+        padding: 30px;
+        margin-bottom: 15px;
+    }
+    
+    .em-stats-number {
+        font-size: 2.5rem;
+    }
+    
+    .em-stats-label {
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+    }
+    
+    .em-video-thumbnail {
+        height: 220px;
+    }
+    
+    .em-play-button {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .em-play-button i {
+        font-size: 1.5rem;
+    }
+    
+    .em-review-form {
+        padding: 30px;
+    }
+    
+    .em-review-form h4 {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .em-reviews-hero {
+        min-height: 35vh;
+    }
+    
+    .em-review-card {
+        padding: 22px;
+    }
+    
+    .em-review-title {
+        font-size: 1.1rem;
+    }
+    
+    .em-review-author {
+        flex-wrap: wrap;
+    }
+    
+    .em-review-badge {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    
+    .em-stats-box {
+        padding: 25px;
+    }
+    
+    .em-stats-number {
+        font-size: 2rem;
+    }
+    
+    .em-video-thumbnail {
+        height: 180px;
+    }
+    
+    .em-review-form {
+        padding: 22px;
+    }
+    
+    .em-star-rating-input {
+        font-size: 1.5rem;
+    }
+}
