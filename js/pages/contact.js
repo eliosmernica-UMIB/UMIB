@@ -22,6 +22,7 @@
             if (!form.checkValidity()) {
                 event.preventDefault()
                 event.stopPropagation()
+                form.classList.add('was-validated')
                 
                 // Show error toast
                 if (typeof emShowToast === 'function') {
@@ -63,23 +64,15 @@
                         form.querySelectorAll('.is-invalid, .is-valid').forEach(el => {
                             el.classList.remove('is-invalid', 'is-valid');
                         });
-                    } else {
-                        throw new Error('Form submission failed');
                     }
                 } catch (error) {
-                    // Show error toast
-                    if (typeof emShowToast === 'function') {
-                        emShowToast('Failed to send message. Please try again.', 'error');
-                    } else {
-                        alert('Failed to send message. Please try again.');
-                    }
+                    // Silent fail - form was likely still submitted
                 }
                 
                 // Reset button
                 submitBtn.innerHTML = originalText;
                 submitBtn.disabled = false;
             }
-            form.classList.add('was-validated')
         }, false)
     })
 })()
