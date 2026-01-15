@@ -56,13 +56,18 @@
                             alert('Message Sent Successfully! We will get back to you within 24 hours.');
                         }
                         
-                        // Reset form and remove validation classes
+                        // Reset form and remove all validation
                         form.reset();
                         form.classList.remove('was-validated');
                         
                         // Remove validation styling from all inputs
                         form.querySelectorAll('.is-invalid, .is-valid').forEach(el => {
                             el.classList.remove('is-invalid', 'is-valid');
+                        });
+                        
+                        // Hide all invalid-feedback messages
+                        form.querySelectorAll('.invalid-feedback').forEach(el => {
+                            el.style.display = 'none';
                         });
                     }
                 } catch (error) {
