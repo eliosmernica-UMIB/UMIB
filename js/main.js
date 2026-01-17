@@ -131,6 +131,32 @@ function emFormatCurrency(amount, currency = 'USD') {
     }).format(amount);
 }
 
+// --- INPUT VALIDATION HELPERS ---
+
+// Validate email format
+function emValidateEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+// Validate phone number (US format)
+function emValidatePhone(phone) {
+    const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+    return phoneRegex.test(phone);
+}
+
+// Sanitize input to prevent XSS
+function emSanitizeInput(str) {
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+}
+
+// Validate required field
+function emValidateRequired(value) {
+    return value !== null && value !== undefined && value.trim() !== '';
+}
+
 // Add toast styles dynamically
 function emAddToastStyles() {
     if (document.getElementById('em-toast-styles')) return;
