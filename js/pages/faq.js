@@ -1,5 +1,6 @@
 /* =============================================
    FAQ.JS - FAQ Page JavaScript (Enhanced)
+   Handles: Search, filtering, accordion animations
    ============================================= */
 
 // Debounce function for search
