@@ -96,6 +96,41 @@ function emShowToast(arg1, arg2) {
     }, 4000);
 }
 
+// --- UTILITY FUNCTIONS ---
+
+// Debounce function for performance optimization
+function emDebounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// Throttle function for scroll events
+function emThrottle(func, limit) {
+    let inThrottle;
+    return function(...args) {
+        if (!inThrottle) {
+            func.apply(this, args);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, limit);
+        }
+    };
+}
+
+// Format currency with locale
+function emFormatCurrency(amount, currency = 'USD') {
+    return new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: currency
+    }).format(amount);
+}
+
 // Add toast styles dynamically
 function emAddToastStyles() {
     if (document.getElementById('em-toast-styles')) return;
