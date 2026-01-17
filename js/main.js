@@ -157,6 +157,40 @@ function emValidateRequired(value) {
     return value !== null && value !== undefined && value.trim() !== '';
 }
 
+// --- LOCAL STORAGE HELPERS ---
+
+// Clear expired cart items (items older than 7 days)
+function emCleanupExpiredCartItems() {
+    const cart = JSON.parse(localStorage.getItem('emCart')) || [];
+    const now = Date.now();
+    const sevenDaysMs = 7 * 24 * 60 * 60 * 1000;
+    
+    const cleanedCart = cart.filter(item => {
+        if (!item.addedAt) return true; // Keep items without timestamp
+        return (now - item.addedAt) < sevenDaysMs;
+    });
+    
+    if (cleanedCart.length !== cart.length) {
+        localStorage.setItem('emCart', JSON.stringify(cleanedCart));
+        console.log(`Cleaned ${cart.length - cleanedCart.length} expired cart items`);
+    }
+}
+
+// Get storage usage info
+function emGetStorageInfo() {
+    let total = 0;
+    for (let key in localStorage) {
+        if (localStorage.hasOwnProperty(key)) {
+            total += localStorage[key].length * 2; // UTF-16 characters = 2 bytes
+        }
+    }
+    return {
+        usedBytes: total,
+        usedKB: (total / 1024).toFixed(2),
+        usedMB: (total / (1024 * 1024)).toFixed(4)
+    };
+}
+
 // Add toast styles dynamically
 function emAddToastStyles() {
     if (document.getElementById('em-toast-styles')) return;
