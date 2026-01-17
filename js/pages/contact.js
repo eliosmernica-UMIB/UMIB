@@ -1,5 +1,7 @@
 /* =============================================
    CONTACT.JS - Contact Page JavaScript (Enhanced)
+   Features: Form validation, AJAX submission, animations
+   Last Updated: 2025
    ============================================= */
 
 // Form Validation with Formspree submission
