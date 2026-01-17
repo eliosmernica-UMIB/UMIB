@@ -2,6 +2,13 @@
    ABOUT.HTML - About Page Styles (Enhanced)
    ============================================= */
 
+/* Page-specific color adjustments */
+.em-about-page {
+    --about-accent: #ffd700;
+    --about-dark: #0a0a0a;
+    --about-gradient: linear-gradient(135deg, #ffd700 0%, #e6c200 100%);
+}
+
 .em-about-hero {
     background: url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1920&q=80') center/cover;
     min-height: 65vh;
