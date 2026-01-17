@@ -1,7 +1,8 @@
-/* 
+/*
     STUDENT INITIALS: EM
     FILE: js/main.js
     DESCRIPTION: Handles Shopping Cart, Rental Calculation, Checkout, and UI Enhancements
+    VERSION: 1.0.0
 */
 
 // --- 1. SHOPPING CART LOGIC ---
